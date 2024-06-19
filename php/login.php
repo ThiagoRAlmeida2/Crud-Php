@@ -5,27 +5,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
     $senha = $_POST['senha'];
 
-    $stmt = $conexao->prepare("SELECT * FROM usuarios WHERE email = ? AND senha = ?");
-    $stmt->bind_param("ss", $email, $senha);
-    $stmt->execute();
-    $result = $stmt->get_result();
+    // Prepara a consulta SQL
+    $instrucaoPreparada = $conexao->prepare("SELECT * FROM usuarios WHERE email = ? AND senha = ?");
+    $instrucaoPreparada->bind_param("ss", $email, $senha); // vincula os valores das variáveis $email e $senha aos lugares onde estão os ? na consulta SQL
+    $instrucaoPreparada->execute(); // consulta SQL é enviada ao banco de dados para execução com os valores dos parâmetros
+    $resultadoConsulta = $instrucaoPreparada->get_result(); // obtém o resultado da consulta do banco de dados
 
-    if ($result->num_rows > 0) {
-        $row = $result->fetch_assoc();
+    // Verifica se encontrou algum usuário
+    if ($resultadoConsulta->num_rows > 0) {
+        // Recupera os dados do usuário
+        $row = $resultadoConsulta->fetch_assoc();
 
+        // Inicia a sessão e armazenar as informações do usuário
         session_start();
         $_SESSION['nome'] = $row['nome'];
         $_SESSION['email'] = $row['email'];
         $_SESSION['telefone'] = $row['telefone'];
-        $_SESSION['senha'] = $row['senha'];  // Adicione esta linha
+        $_SESSION['senha'] = $row['senha'];
 
         header('Location: perfil.php');
-        exit();
+        exit;
     } else {
         echo "Usuário ou senha incorretos";
     }
-
-    $stmt->close();
-    $conexao->close();
 }
-?>

@@ -1,7 +1,44 @@
 <!DOCTYPE html>
-<body>  
-    <?php
-    include 'perfil_form.php';
-    ?>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Usuário</title>
+    <link rel="stylesheet" href="../css/perfil.css">
+</head>
+
+<body>
+    <div class="container">
+    <h1>Perfil do Usuário</h1>
+    <form method="POST" action="atualizarDados.php">
+        <p><strong>Nome:</strong>
+            <input type="text" name="nome" value="<?php echo htmlspecialchars($nome); ?>">
+        </p>
+        <p><strong>Email:</strong>
+            <input type="text" name="email" value="<?php echo htmlspecialchars($email); ?>" readonly>
+        </p>
+        <p><strong>Telefone:</strong>
+            <input type="text" name="telefone" value="<?php echo htmlspecialchars($telefone); ?>">
+        </p>
+        <div class="password-container">
+            <p><strong>Senha:</strong>
+                <input type="password" name="senha" value="<?php echo htmlspecialchars($senha); ?>">
+                <span class="IconeMostrarSenha" onclick="MostrarSenha()">👁️</span>
+            </p>
+        </div>
+        <div class="botaoContainer">
+            <button type="submit" name="update">Atualizar Dados</button>
+            <a href="sairDaConta.php" class="botaoSairDaConta">Sair da conta</a>
+        </div>
+    </form>
+
+    <form method="POST" action="excluirConta.php">
+        <button type="submit" name="delete" class="botaoExcluirConta ">Excluir Conta</button>
+    </form>
+</div>
+
+
+    <script src="../js/mostrarSenha.js"></script>
 </body>
 </html>
