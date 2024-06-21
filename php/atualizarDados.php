@@ -59,11 +59,13 @@ $conn->close();
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil do Usuário</title>
-    <link rel="stylesheet" href="../css/perfil.css"> 
+    <link rel="stylesheet" href="../css/perfilEstilo.css">
+
 </head>
 
 <body>
@@ -98,4 +100,5 @@ $conn->close();
 
     <script src="../js/mostrarSenha.js"></script>
 </body>
+
 </html>

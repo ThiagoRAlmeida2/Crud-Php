@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #00aef9;
+    background-color: #24388B;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,13 +21,17 @@ h2 {
     margin-bottom: 30px;
 }
 
+form {
+    text-align: left; 
+}
+
 label {
     display: block;
-    margin: 10px 0 5px;
+    margin-bottom: 5px;
 }
 
 input {
-    width: 90%;
+    width: calc(100% - 16px); 
     padding: 8px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
@@ -35,8 +39,8 @@ input {
 }
 
 button {
-    width: 95%;
-    margin-top: 7px;
+    width: 100%; 
+    margin-top: 15px; 
     padding: 10px;
     background-color: #5cb85c;
     color: #fff;
@@ -50,5 +54,5 @@ button:hover {
 }
 
 p {
-    margin-top: 25px;
+    margin-top: 20px; 
 }

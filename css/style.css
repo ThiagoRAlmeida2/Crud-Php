@@ -1,0 +1,378 @@
+/*======== GERAL =========*/
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'arial';
+    font-size: 62.5%;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.container {
+    max-width: 1152px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.blocoInline {
+    font-size: 1.6em;
+}
+
+/*======== CABEÇALHO =========*/
+
+header {
+    background: #24388B;
+    padding: 10px 0;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    margin-left: 70px;
+}
+
+ul.principal {
+    margin: 36px 0 0 0;
+    padding: 0;
+    list-style: none;
+    font-size: 1.6em;
+}
+
+li.emLinha {
+    display: inline;
+    padding: 0;
+    margin: 0 16px 0 0;
+}
+
+li.emLinha:last-child {
+    margin: 0;
+}
+
+li.emLinha a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+    margin-left: 30px;
+}
+
+li.emLinha a:hover {
+    color: cyan;
+}
+
+li.emLinha a span {
+    color: cyan;
+    font-size: 14px;
+    display: inline-block;
+    transform: rotate(0deg);
+    transition: transform 0.1s;
+}
+
+li.emLinha:hover a span {
+    transform: rotate(180deg);
+}
+
+ul.oculto {
+    visibility: hidden;
+    background: #fff;
+    border: solid 1px #000;
+    border-radius: 5px;
+    list-style: none;
+    position: absolute;
+    padding: 5px 10px;
+    margin-left: 60px;
+    transform: translateY(-10px);
+    opacity: 0;
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+li.emLinha:hover ul.oculto {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+ul.oculto li {
+    padding: 5px 0;
+}
+
+ul.oculto li a {
+    color: #000;
+}
+
+/*======== SEÇÃO 1 =========*/
+
+.blocoFig {
+    width: 32%;
+    margin: 50px 0;
+    text-align: center;
+}
+
+.blocoFig figure {
+    margin: 0;
+}
+
+.blocoFig figure img {
+    max-width: 100%;
+    height: auto;
+    height: 200px; 
+}
+
+
+
+
+.blocoFig h2 {
+    margin: 5px 0 0 0;
+    text-align: center;
+    font-size: 2.2em;
+}
+
+.blocoFig a {
+    text-decoration: none;
+    color: black;
+    opacity: 1;
+    transition: opacity 0.2s;
+}
+
+.blocoFig a:hover {
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+/*======== SEÇÃO 2 =========*/
+
+.margemSecao2 {
+    margin: 20px auto;
+}
+
+.margemSecao2 h3 {
+    margin: 0 auto;
+    font-size: 3.6em;
+}
+
+/*======== SEÇÃO 3 =========*/
+
+article {
+    width: 49%;
+}
+
+article p {
+    text-align: justify;
+    font-size: 1.6em;
+}
+
+/*======== RODAPÉ =========*/
+
+footer {
+    background: #24388B;
+    padding: 30px 0;
+    margin-top: 20px;
+}
+
+.divRodape {
+    width: 23.5%;
+    font-size: 1.6em;
+    margin-right: 2%;
+}
+
+.divRodape:last-child {
+    margin-right: 0;
+}
+
+.divImagem {
+    text-align: center;
+}
+
+.divImagem .imagemLogo {
+    width: 150px; 
+    height: auto; 
+}
+
+.divImagem img {
+    margin-bottom: 50px;
+}
+
+.divImagem img:last-child {
+    margin-bottom: 0;
+}
+
+.imgBloco02 {
+    margin-bottom: 36px;
+}
+
+.divRodape p {
+    color: #BCD3DC;
+    margin: 0 0 30px 0;
+}
+
+.divRodape p:last-child {
+    margin: 0;
+}
+
+.divRodape p.pLink {
+    color: #FFF;
+    font-weight: bold;
+}
+
+.divRodape p:first-child {
+    margin-top: 20px;
+}
+
+img.divImagem {
+    margin-right: 15px;
+    margin-bottom: 60px;
+}
+
+img.divImagem:last-child {
+    margin-right: 0;
+}
+
+.footer-link {
+    color: #fff;
+    text-decoration: none;
+}
+/*======== INTERNAS =========*/
+
+.interna {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.legenda {
+    width: 50%;
+    text-align: justify;
+    font-size: 20px;
+    margin: 0;
+}
+
+.figuraLegenda {
+    width: 48%;
+    margin: 0;
+}
+
+.figuraLegenda img {
+    max-width: 100%;
+}
+
+/*======== RESPONSIVIDADE =========*/
+
+@media screen and (max-width: 960px) {
+    .container {
+        display: block;
+    }
+
+    .menu-icon {
+        position: fixed;
+        top: 30px;
+        right: 15px;
+        cursor: pointer;
+        display: inline-block;
+        width: 44px;
+        height: 36px;
+        border: 1px solid #FFF;
+        border-radius: 5px;
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="44" height="36"><path fill="none" d="M0 0h24v24H0z"/><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    ul.principal {
+        margin-top: 10px;
+        display: none;
+    }
+
+    li.emLinha {
+        width: 100%;
+        display: block;
+        padding: 10px 0;
+        text-align: center;
+        background: #c7c7c7;
+    }
+
+    li.emLinha a {
+        color: #000;
+    }
+
+    li.emLinha a span {
+        color: red;
+    }
+
+    #menu-toggle:checked + .menu-icon + .principal {
+        display: block;
+    }
+
+    .divImagem img, .imgBloco02 {
+        max-width: 100%;
+    }
+
+    img.divImagem {
+        height: 30px;
+        margin-right: 10px;
+    }
+
+    .divRodape {
+        display: inline-block;
+    }
+
+    .divRodape {
+        vertical-align: top;
+        height: 450px;
+        width: 23.2%;
+        font-size: 1.6em;
+        margin-right: 2%;
+    }
+
+    .divRodape:last-child {
+        margin-right: 0;
+    }
+
+    .divRodape:nth-child(odd) {
+        background: darkgreen;
+    }
+
+    .divRodape:nth-child(even) {
+        background: darkblue;
+    }
+}
+
+@media screen and (max-width: 724px) {
+    .container {
+        display: block;
+        margin: 0 50px;
+    }
+
+    .divRodape {
+        display: inline-block;
+        width: 48.7%;
+        margin-right: 2%;
+        border: none;
+        margin-bottom: 10px;
+    }
+
+    .divRodape:nth-child(even) {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .divRodape {
+        width: 100%;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .divRodape img {
+        margin: 0 auto;
+        display: block;
+        margin-bottom: 30px;
+    }
+
+}

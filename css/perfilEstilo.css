@@ -36,7 +36,7 @@ a.botaoSairDaConta,
 form button, #botaoExcluirConta {
     display: inline-block;
     width: 32%;
-    background-color: red;
+    background-color: #5cb85c;
     color: white;
     border-radius: 8px;
     text-decoration: none;
@@ -61,20 +61,20 @@ input[type="password"] {
 .IconeMostrarSenha {
     position: absolute;
     left: 90%;
-    bottom: 12.5vh; 
+    bottom: 11vh;
     cursor: pointer;
 }
 
 span.iconeMostrarSenhaAtualizada {
     position: absolute;
     left: 90%;
-    bottom: 12.5vh; 
+    bottom: 11vh; 
     cursor: pointer
 }
 
 .botaoExcluirConta {
     width: 30%;
-    background-color: red;
+    background-color: #5cb85c;
     position: absolute;
     bottom: 8.5%; 
     left: 35%; 
@@ -82,7 +82,7 @@ span.iconeMostrarSenhaAtualizada {
 
 .botaoExcluirContaAtualizada {
     width: 30%;
-    background-color: red;
+    background-color: #5cb85c;
     position: absolute;
     bottom: 8%; 
     left: 35%;
